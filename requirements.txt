@@ -1,0 +1,7 @@
+# Pinned dependencies for the xLSTM from-scratch reimplementation.
+# Versions are the ones the project was developed and tested against.
+torch==2.12.1
+numpy==2.5.0
+matplotlib==3.11.0
+pytest==9.1.1
+ruff==0.15.20

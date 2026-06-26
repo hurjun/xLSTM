@@ -1,0 +1,32 @@
+[project]
+name = "xlstm-from-scratch"
+version = "0.1.0"
+description = "A from-scratch, educational PyTorch reimplementation of xLSTM (Beck et al., 2024)."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Heojun Hur" }]
+dependencies = [
+    "torch==2.12.1",
+    "numpy==2.5.0",
+    "matplotlib==3.11.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1", "ruff==0.15.20"]
+
+[tool.setuptools.packages.find]
+include = ["xlstm*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "ARG", "SIM"]
+# N-prefixed names (sLSTM/mLSTM, q/k/v, C/n/m) follow the paper's notation.
+ignore = ["E741", "N801", "N802", "N803", "N806"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

@@ -1,0 +1,23 @@
+{
+  "task": "recall",
+  "seq_len": 64,
+  "vocab_size": 16,
+  "steps": 1500,
+  "seed": 0,
+  "models": [
+    {
+      "name": "xLSTM",
+      "params": 124872,
+      "final_acc": 1.0,
+      "final_loss": 0.001772195566445589,
+      "seconds": 116.08429431915283
+    },
+    {
+      "name": "LSTM",
+      "params": 68736,
+      "final_acc": 0.068359375,
+      "final_loss": 2.7729053497314453,
+      "seconds": 35.648250102996826
+    }
+  ]
+}
